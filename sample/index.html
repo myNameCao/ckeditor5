@@ -1,0 +1,111 @@
+<!DOCTYPE html><!--
+	Copyright (c) 2014-2022, CKSource Holding sp. z o.o. All rights reserved.
+	This file is licensed under the terms of the MIT License (see LICENSE.md).
+-->
+
+<html lang="en" dir="ltr">
+	<head>
+		<title>CKEditor 5 DecoupledDocumentEditor build</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/png" href="https://c.cksource.com/a/1/logos/ckeditor5.png">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+	<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/katex@0.13.5/dist/katex.min.css"
+			integrity="sha384-L+Gq2Cso/Y2x8fX4wausgiZT8z0QPZz7OqPuz4YqAycQJyrJT9NRLpjFBD6zlOia"
+			crossorigin="anonymous"
+		/>
+		<script
+			defer
+			src="https://cdn.jsdelivr.net/npm/katex@0.13.5/dist/katex.min.js"
+			integrity="sha384-z64WtjpyrKFsxox9eI4SI8eM9toXdoYeWb5Qh+8PO+eG54Bv9BZqf9xNhlcLf/sA"
+			crossorigin="anonymous"
+		></script>
+	<body data-editor="DecoupledDocumentEditor" data-collaboration="false" data-revision-history="false">
+		
+		<main>
+			<div class="message">
+				<div class="centered">
+					<h2>CKEditor 5 online builder demo - DecoupledDocumentEditor build</h2>
+				</div>
+			</div>
+			<div class="centered">
+				<div class="row">
+					<div class="document-editor__toolbar"></div>
+				</div>
+				<div class="row row-editor">
+					<div class="editor-container">
+						<div class="editor">
+							
+						</div>
+					</div>
+				</div></div>
+			</div>
+		</main>
+		<footer>
+			<p><a href="https://ckeditor.com/ckeditor-5/" target="_blank" rel="noopener">CKEditor 5</a>
+				– Rich text editor of tomorrow, available today
+			</p>
+			<p>Copyright © 2003-2022,
+				<a href="https://cksource.com/" target="_blank" rel="noopener">CKSource</a>
+				Holding sp. z o.o. All rights reserved.
+			</p>
+		</footer>
+		<script src="../build/ckeditor.js"></script>
+		<script>
+		DecoupledDocumentEditor
+				.create( document.querySelector( '.editor' ), {
+					licenseKey: '',
+					
+				} )
+				.then( editor => {
+					editor.setData('<div style="line-height:10mm"><p> 1.<u>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</u></p></div>')
+					window.editor = editor;
+					editor.ui.focusTracker.on(
+            'change:isFocused',
+            (evt, name, isFocused) => {
+              if (!isFocused) {
+
+				let val = this.editor.getData({ trim: 'none' })
+        console.log(val)
+
+				
+              }
+             
+            }
+          )
+					
+					// Set a custom container for the toolbar.
+					document.querySelector( '.document-editor__toolbar' ).appendChild( editor.ui.view.toolbar.element );
+					document.querySelector( '.ck-toolbar' ).classList.add( 'ck-reset_all' );
+
+
+				} )
+				.catch( error => {
+					console.error( 'Oops, something went wrong!' );
+					console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+					console.warn( 'Build id: dpchf14up5bt-yx6azvikxedv' );
+					console.error( error );
+				} );
+		</script>
+
+		<style>
+			 .ck-editor__editable  p {
+   
+      position: relative;
+      
+    }
+
+	.ck-editor__editable  p::after {
+        content: '↩';
+        white-space: pre-wrap;
+        color: #aaa;
+        position: absolute;
+        top: 0;
+      }
+  
+		</style>
+	</body>
+</html>
