@@ -38,6 +38,7 @@
     "start": "npx http-server -o ./sample -s -c-1"
   },
   "dependencies": {
+    "ckeditor5-line-height": "^0.3.1",
     "ckeditor5-math": "^35.2.1"
   }
 }

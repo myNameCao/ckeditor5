@@ -41,13 +41,15 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 
 
-
+// 自己下载的
 import Mathematics from 'ckeditor5-math/src/math';
+// import LineHeight from 'ckeditor5-line-height';
 
 class Editor extends DecoupledDocumentEditor {}
 
 // Plugins to include in the build.
 Editor.builtinPlugins = [
+	// LineHeight,
 	Alignment,
 	AutoImage,
 	Bold,
@@ -97,7 +99,7 @@ Editor.defaultConfig = {
 			'fontFamily',
 			'fontColor',
 			'alignment',
-			'lineHeight',
+			// 'lineHeight',
 			'|',
 			'bold',
 			'italic',
