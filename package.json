@@ -36,5 +36,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "npx http-server -o ./sample -s -c-1"
+  },
+  "dependencies": {
+    "ckeditor5-math": "^35.2.1"
   }
 }

@@ -242,6 +242,11 @@
     ckeditor5 "^35.2.1"
     lodash-es "^4.17.15"
 
+"@ckeditor/ckeditor5-inspector@^3.0.0":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-inspector/-/ckeditor5-inspector-3.1.1.tgz#f7cefb680b21c26c6be2c58e8b72893ee77fc7ef"
+  integrity sha512-5lGYklA3dsXgIi5j39gQ8VSxpiW+FGLw5Midj8ivIndMc0f67qBGOOV+vbjrZUvdA7xba3SH7W3N1M7Iz8nVsw==
+
 "@ckeditor/ckeditor5-paragraph@^35.2.0", "@ckeditor/ckeditor5-paragraph@^35.2.1":
   version "35.2.1"
   resolved "https://registry.yarnpkg.com/@ckeditor/ckeditor5-paragraph/-/ckeditor5-paragraph-35.2.1.tgz#7dcd314be57a0a995faffdbbf509acceaf6a6829"
@@ -844,6 +849,20 @@ chrome-trace-event@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/chrome-trace-event/-/chrome-trace-event-1.0.3.tgz#1015eced4741e15d06664a957dbbf50d041e26ac"
   integrity sha512-p3KULyQg4S7NIHixdwbGX+nFHkoBiA4YQmyWtjb8XngSKV124nJmRysgAeujbUVb15vh+RvFUfCPqU7rXk+hZg==
+
+ckeditor5-math@^35.2.1:
+  version "35.2.1"
+  resolved "https://registry.yarnpkg.com/ckeditor5-math/-/ckeditor5-math-35.2.1.tgz#7737cbab8c7458b841876c614a2efc12fb73a529"
+  integrity sha512-oNkY/aBL/lS3YWcrnVKyBJ2iIYpMyrppSJnooELX8bOAJOKslmtaquKfqdw9XsU4v9WPYQErZSplN8CGmSTh6w==
+  dependencies:
+    "@ckeditor/ckeditor5-clipboard" "^35.2.1"
+    "@ckeditor/ckeditor5-core" "^35.2.1"
+    "@ckeditor/ckeditor5-engine" "^35.2.1"
+    "@ckeditor/ckeditor5-inspector" "^3.0.0"
+    "@ckeditor/ckeditor5-ui" "^35.2.1"
+    "@ckeditor/ckeditor5-undo" "^35.2.1"
+    "@ckeditor/ckeditor5-utils" "^35.2.1"
+    "@ckeditor/ckeditor5-widget" "^35.2.1"
 
 ckeditor5@^35.2.1:
   version "35.2.1"
